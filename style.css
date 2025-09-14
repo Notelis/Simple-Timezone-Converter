@@ -1,43 +1,89 @@
 body {
-  font-family: Arial, sans-serif;
-  background: rgba(167, 167, 167, 0.859);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
 }
 
-.container {
-  background: rgb(239, 239, 239);
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px black;
+h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #222;
   text-align: center;
-  max-width: 400px;
-  width: 100%;
 }
 
-select, input, button {
-  width: 95%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid black;
-  border-radius: 8px;
-  font-size: 14px;
+label {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+input, select {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  appearance: none; 
+}
+
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+  cursor: pointer;
 }
 
 button {
   font-weight: bold;
-  background: #007bff;
+  font-size: 16px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
   color: white;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 button:hover {
-  background: #244e7b;
+  background: linear-gradient(135deg, #0056b3, #0092cc);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-.result {
-  margin-top: 15px;
-  font-weight: bold;
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+
+.result {
+  display: none;  
+  margin-top: 20px;
+  font-weight: bold;
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(6px);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  color: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
