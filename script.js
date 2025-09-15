@@ -16,6 +16,8 @@ function convertTime() {
   const timeValue = document.getElementById('timeInput').value;
   if (!timeValue) {
     resultDiv.innerText = "Please enter a time";
+    // Show the result div
+    resultDiv.style.display = 'block';
     return;
   }
 
@@ -40,6 +42,8 @@ function convertTime() {
 
   resultDiv.innerText =
   `${timeValue} in ${fromCity} is ${converted} in ${toCity}`;
+
+  resultDiv.style.display = 'block';
 }
 
 convertBtn.addEventListener('click', convertTime);
